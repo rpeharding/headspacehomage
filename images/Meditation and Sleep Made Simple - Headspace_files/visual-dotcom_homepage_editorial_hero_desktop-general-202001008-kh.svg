@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 472 640" style="enable-background:new 0 0 472 640;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FAF6F4;}
+	.st1{clip-path:url(#SVGID_2_);}
+	.st2{fill:#0C6FF9;}
+	.st3{fill:#084FFF;}
+	.st4{fill:#FF7E1D;}
+	.st5{fill:#FF6700;}
+	.st6{fill:#FFCE00;}
+	.st7{fill:none;stroke:#413D45;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;}
+	.st8{fill:none;stroke:#084FFF;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+	.st9{fill:none;stroke:#FFB700;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<title>Artboard 1 copy</title>
+<rect class="st0" width="472" height="640"/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="472" height="640"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st1">
+		<circle class="st2" cx="86.3" cy="277.6" r="209.7"/>
+		<circle class="st3" cx="387.5" cy="543.4" r="370.8"/>
+		<circle class="st4" cx="426.4" cy="507.6" r="370.9"/>
+		<circle class="st5" cx="71.1" cy="660.7" r="263.3"/>
+		<circle class="st6" cx="50.6" cy="640" r="263.3"/>
+	</g>
+</g>
+<path class="st7" d="M338.1,214.4c3.2,9.1,13.2,13.8,22.3,10.6c4.9-1.8,8.8-5.7,10.6-10.6"/>
+<path class="st7" d="M387.5,214.4c3.2,9.1,13.2,13.8,22.3,10.6c4.9-1.8,8.8-5.7,10.6-10.6"/>
+<path class="st7" d="M303.6,227.5c42.8,39.3,108.6,39.3,151.5,0"/>
+<path class="st8" d="M71.1,145.3c2.9,7.5,11.4,11.1,18.8,8.2c3.7-1.5,6.7-4.4,8.2-8.2"/>
+<path class="st8" d="M91.1,121.2c3.9,9.9,15.1,14.7,25,10.8c5-2,8.9-5.9,10.8-10.8"/>
+<path class="st8" d="M42.2,121.2c3.9,9.9,15.1,14.8,25,10.9c5-2,8.9-5.9,10.9-10.9"/>
+<path class="st9" d="M66.1,458.9c0.2,8.3,7.2,14.9,15.5,14.7c8-0.2,14.5-6.7,14.7-14.7"/>
+<path class="st9" d="M111,458.9c0.2,8.3,7.2,14.9,15.5,14.7c8-0.2,14.5-6.7,14.7-14.7"/>
+<path class="st9" d="M36.7,458.9c12.7,36.9,52.9,56.6,89.8,44c20.7-7.1,36.9-23.3,44-44"/>
+</svg>
