@@ -5,11 +5,12 @@
   gap: 10px;
 }
 
-button, .family-section-text button, .hero-wrapper button {
+.btn, button, .articles-section .btn, .family-section-text button, .hero-wrapper button {
   font-family: "Headspace", sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
   letter-spacing: -0.1rem;
+  color: #3d3c3c;
   letter-spacing: 0rem;
   background-color: #0061ef;
   color: #ffffff;
@@ -18,17 +19,17 @@ button, .family-section-text button, .hero-wrapper button {
   border-radius: 4rem;
   border: none;
 }
-button:hover {
+.btn:hover, button:hover {
   cursor: pointer;
   background-color: #0045eb;
 }
-button:focus-within {
+.btn:focus-within, button:focus-within {
   background-color: #0045eb;
   border: 1px solid #ffffff;
   outline: 2px solid #0045eb;
 }
 
-.family-section-text button, .hero-wrapper button {
+.articles-section .btn, .family-section-text button, .hero-wrapper button {
   padding: 1.8rem;
   border-radius: 4rem;
   border: none;
@@ -50,13 +51,15 @@ h1 {
   font-weight: bold;
   font-size: 6rem;
   letter-spacing: -0.1rem;
+  color: #3d3c3c;
 }
 
 h2 {
   font-family: "Headspace", sans-serif;
   font-weight: bold;
-  font-size: 2.8rem;
+  font-size: 3.6rem;
   letter-spacing: -0.1rem;
+  color: #3d3c3c;
 }
 
 header p,
@@ -64,6 +67,7 @@ header li {
   font-family: "Headspace", sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
+  color: #3d3c3c;
 }
 
 p,
@@ -71,15 +75,18 @@ li {
   font-family: "Headspace", sans-serif;
   font-size: 1.8rem;
   font-weight: normal;
+  color: #3d3c3c;
   margin: 0;
   line-height: 2.6rem;
   letter-spacing: -0.01em;
+  color: #3d3c3c;
 }
 
 .small-print {
   font-family: "Headspace", sans-serif;
   font-size: 1.2rem;
   font-weight: normal;
+  color: #3d3c3c;
   color: #44423f;
 }
 
@@ -101,6 +108,7 @@ ul ul li a svg {
   box-shadow: 0 0.1rem 1rem rgba(65, 61, 69, 0.0784313725);
   margin: 0 0;
   padding: 0.8rem 2rem;
+  z-index: 9999;
 }
 
 .burger-menu-contents {
@@ -120,16 +128,19 @@ ul ul li a svg {
   font-family: "Headspace", sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
+  color: #3d3c3c;
 }
 
 .header-promo {
   background-color: #31abff;
-  color: #ffffff;
   text-align: center;
   padding: 1.5rem 0rem;
 }
 .header-promo p {
   margin: 0;
+}
+.header-promo a > p {
+  color: #ffffff;
 }
 
 .hero-wrapper {
@@ -143,6 +154,7 @@ ul ul li a svg {
   font-weight: bold;
   font-size: 3.6rem;
   letter-spacing: -0.1rem;
+  color: #3d3c3c;
   margin-bottom: 2.6rem;
   letter-spacing: -0.1rem;
   line-height: 4.1rem;
@@ -151,6 +163,7 @@ ul ul li a svg {
   font-family: "Headspace", sans-serif;
   font-size: 2.2rem;
   font-weight: normal;
+  color: #3d3c3c;
   padding-bottom: 2.2rem;
   letter-spacing: -0.05rem;
 }
@@ -182,6 +195,7 @@ ul ul li a svg {
   font-family: "Headspace", sans-serif;
   font-size: 1.2rem;
   font-weight: normal;
+  color: #3d3c3c;
 }
 .plan-card-container .flex-container {
   justify-content: space-between;
@@ -193,12 +207,14 @@ ul ul li a svg {
   font-family: "Headspace", sans-serif;
   font-size: 1.2rem;
   font-weight: normal;
+  color: #3d3c3c;
 }
 .plan-card-container .flex-container .plan-card-text :nth-child(2) {
   font-family: "Headspace", sans-serif;
   font-weight: bold;
   font-size: 2.4rem;
   letter-spacing: -0.1rem;
+  color: #3d3c3c;
 }
 
 .hero-content :nth-child(4) {
@@ -262,6 +278,7 @@ input[type=checkbox] {
   gap: 2.8rem;
 }
 .family-section-text h2 {
+  font-size: 2.8rem;
   line-height: 3.6rem;
 }
 .family-section-text button {
@@ -277,10 +294,6 @@ input[type=checkbox] {
 }
 .stories h2,
 .audio h2 {
-  font-family: "Headspace", sans-serif;
-  font-weight: bold;
-  font-size: 3.6rem;
-  letter-spacing: -0.1rem;
   text-align: center;
 }
 
@@ -348,6 +361,7 @@ input[type=checkbox] {
   font-family: "Headspace", sans-serif;
   font-size: 1.4rem;
   font-weight: normal;
+  color: #3d3c3c;
   white-space: nowrap;
 }
 
@@ -389,7 +403,164 @@ audio::-webkit-media-controls-play-button {
   box-shadow: 0px 0px 10px 3px rgba(65, 61, 69, 0.0666666667);
 }
 
-@media screen and (min-width: 800px) {
+.articles-section {
+  margin: 2rem 2rem;
+  padding: 0rem 0rem;
+}
+.articles-section h2 {
+  text-align: right;
+}
+.articles-section .btn {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.large-articles-container,
+.small-articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 6rem 0rem;
+}
+
+.article-card {
+  position: relative;
+  margin: 0.6rem 0rem;
+  min-height: 40rem;
+}
+.article-card .article-card-content {
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 6px 0px 0px #ff7d1d;
+  transition: all 0.1s ease-in-out;
+}
+.article-card .article-card-content:hover {
+  box-shadow: -6px 6px 0px 0px #ff7d1d;
+  transition: all 0.1s ease-in-out;
+}
+.article-card .article-card-content .article-card-top-badge {
+  background-color: #ff7d1d;
+  width: 10rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 0rem 1.2rem;
+  border-radius: 0.4rem;
+  font-family: "Headspace", sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #3d3c3c;
+}
+.article-card .article-card-content .article-card-bottom-content {
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 1.2rem;
+}
+.article-card .article-card-content .article-card-bottom-content h3 {
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+.article-card .article-card-content .article-card-bottom-content svg {
+  display: none;
+}
+
+.article-img {
+  width: 100%;
+  height: 40rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  border-radius: 1.2rem;
+}
+
+.small-articles-container > a:nth-child(even) > .article-small {
+  border-bottom: 2px solid #ffce03;
+}
+
+.article-small {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #0061ef;
+  padding: 2rem 0rem;
+  overflow: hidden;
+}
+.article-small .article-small-img {
+  order: 1;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0px 6px 0px 0px #0045eb;
+}
+.article-small .article-small-bottom-content {
+  order: 0;
+}
+.article-small h3 {
+  font-size: 2.4rem;
+  padding-right: 2rem;
+}
+.article-small p {
+  display: none;
+}
+.article-small svg {
+  width: 2.4rem;
+}
+
+.list-section {
+  margin: 8rem 2rem;
+  padding: 0rem 0rem;
+}
+.list-section h2 {
+  line-height: 4rem;
+}
+
+.list {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.list li {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: rgb(124, 124, 124);
+}
+.list li:nth-last-child(1) {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 2rem;
+}
+.list h3 {
+  font-size: 2.8rem;
+  padding-bottom: 2.8rem;
+  line-height: 4rem;
+  letter-spacing: -0.1rem;
+}
+
+.list-img {
+  border-radius: 1.3rem;
+  display: none;
+  width: 50%;
+}
+
+.list-end-img {
+  margin-top: -20rem;
+  -o-object-fit: zoom;
+     object-fit: zoom;
+  transform: scale(1.5);
+}
+
+@media screen and (min-width: 770px) {
   .desktop-nav-links {
     display: flex;
     align-items: center;
