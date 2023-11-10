@@ -81,7 +81,7 @@ $navPromo: #31abff;
 
 %buttonDesktopBig {
   @extend %buttonDesktop;
-  padding: 2rem 6rem;
+  padding: 2rem 4rem;
 }
 
 // GENERAL RULES
@@ -162,7 +162,7 @@ ul ul li a {
   @extend %flexbasic;
   justify-content: space-between;
   box-shadow: 0 0.1rem 1rem #413d4514;
-  @include spacing(0, 0, 0.8rem, 2rem);
+  @include spacing(0, 0, 0.2rem, 2rem);
   z-index: 9999;
 }
 
@@ -192,6 +192,7 @@ ul ul li a {
   }
   & a > p {
     color: $fontColourLight;
+    font-size: 1.6rem;
   }
 }
 
@@ -226,12 +227,17 @@ ul ul li a {
   }
 }
 
-.wave {
-  fill: $backgroundLight;
+.wave-2 {
   width: 100%;
-  position: absolute;
-  // filter: invert(100%);
 }
+
+// .wave {
+//   width: 100%;
+
+//   transform: translateY(-90%);
+//   filter: invert(6%) sepia(8%) saturate(563%) hue-rotate(313deg)
+//     brightness(106%) contrast(97%);
+// }
 
 //card
 .plan-card-container {
@@ -343,12 +349,13 @@ input[type="checkbox"] {
   margin: 0 4rem;
   & img {
     width: 100%;
+    border-radius: 1.3rem;
   }
 }
 .family-section-text {
   display: flex;
   flex-direction: column;
-  gap: 2.8rem;
+  gap: 2.4rem;
   & h2 {
     font-size: 2.8rem;
     line-height: 3.6rem;
@@ -475,10 +482,10 @@ audio::-webkit-media-controls-play-button {
 
 .audio-img-container {
   @extend %flexbasic;
-  gap: 70px;
+  gap: 6rem;
   width: 100%;
   justify-content: flex-end;
-  margin: -60px 210px 0px 0px;
+  transform: translate(-20%, 90%);
   & .audio-img {
     height: 200px;
     transform: rotate(45deg);
@@ -490,15 +497,13 @@ audio::-webkit-media-controls-play-button {
 //ARTICLES SECTION
 
 .articles-section {
-  @include spacing(2rem, 2rem, 0rem, 0rem);
+  @include spacing(16rem, 2rem, 0rem, 0rem);
+  text-align: center;
   & h2 {
     text-align: right;
   }
   & .btn {
-    @extend %buttonDesktop;
-    margin: 0 auto;
-    text-align: center;
-    // this won't center?
+    @extend %buttonDesktopBig;
   }
 }
 
@@ -820,32 +825,55 @@ footer {
 }
 // MEDIA QUERIES
 
+@media screen and (min-width: 500px) {
+  .family-section {
+    & img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 0;
+    }
+  }
+}
+
 @media screen and (min-width: 770px) {
+  .nav-logo {
+    width: 192px;
+  }
+
+  button {
+    padding: 1.3rem 2.4rem;
+  }
   h2 {
     font-size: 5.2rem;
   }
   .desktop-nav-links {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    margin: 0 1.6rem;
   }
   .burger-menu-wrapper {
-    padding: 2rem 3.2rem;
+    padding: 0.6rem 3.2rem;
   }
 
   // hero
   .hero-wrapper {
+    padding-top: 6rem;
     display: flex;
     align-items: center;
     flex: 1 1 0;
+    width: 100%;
+    overflow: clip;
     h2 {
       font-size: 5.2rem;
+      line-height: 6rem;
     }
     justify-content: space-around;
 
     & .desk-hero-img {
       display: initial;
-      height: 100vh;
+      height: 670px;
     }
     & .mob-hero-img {
       display: none;
@@ -860,13 +888,49 @@ footer {
 
   //trio
   .trio-container {
+    margin-top: -10rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .trio > div {
+  .trio {
     display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: space-between;
+    & img {
+      width: 112px;
+    }
+    & > div > h3 {
+      width: 200px;
+      line-height: 3rem;
+    }
+    & p {
+      width: 450px;
+    }
   }
 
+  // family section
+  .family-section {
+    display: flex;
+    padding: 4rem 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    margin: 15rem 0rem;
+    & h3 {
+      font-size: 3.2rem;
+    }
+    & div,
+    img {
+      max-width: 348px;
+      max-height: 348px;
+      border-radius: 1.3rem;
+    }
+  }
+
+  //stories
   .stories-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -880,4 +944,57 @@ footer {
   .stories-card {
     display: initial;
   }
+
+  //audio
+  .audio-section {
+    overflow: clip;
+
+    .audio {
+      .audio-badges {
+        width: 75%;
+        gap: 1.6rem;
+        justify-content: space-around;
+        .audio-badge {
+          width: 10rem;
+          text-align: center;
+        }
+      }
+      .audio-player-container {
+        border-radius: 0;
+        margin-bottom: 10rem;
+        max-width: 730px;
+        position: relative;
+        .audio-card-content {
+          margin: 3rem auto;
+          width: 60%;
+        }
+      }
+      h2 {
+        max-width: 40rem;
+        line-height: 6rem;
+        margin-bottom: 2rem;
+      }
+      button {
+        margin-bottom: 6rem;
+      }
+      .audio-img-container {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        position: absolute;
+        transform: translateY(-90%);
+        .audio-img {
+          height: 350px;
+        }
+        .img-1 {
+          transform: translateX(-185px) translateY(10%) rotate(15deg);
+        }
+        .img-2 {
+          transform: translateX(115px) translateY(-40%) rotate(-15deg);
+        }
+      }
+    }
+  }
+
+  // articles
 }
