@@ -273,14 +273,15 @@
     </div>
 
     <main>
-      <section>
+      <section class="hero">
         <div class="hero-wrapper">
-          <!-- <img
-            class="hero-img-mob"
-            src="images/Hero_Mobile_Image.webp"
-            alt="two phones showing the headspace app"
-          /> -->
           <img
+            class="desk-hero-img"
+            src="images/Hero_Image_Left.webp"
+            alt="screenshot of managing anxiety page"
+          />
+          <img
+            class="mob-hero-img"
             srcset="
               images/Hero_Mobile_Image-596w.webp   596w,
               images/Hero_Mobile_Image-1192w.webp 1192w
@@ -288,6 +289,7 @@
             sizes="(max-width: 596px) 100vw, (max-width: 1192px) 100vw, 1192px"
             alt="two phones showing the headspace app"
           />
+
           <div class="hero-content">
             <h2>Be kind to your mind</h2>
             <h3>Select a plan:</h3>
@@ -326,40 +328,50 @@
             </p>
             <button class="hero-btn">Try for free</button>
           </div>
+          <img
+            class="desk-hero-img"
+            src="images/Hero_Right_Image_Default-2022.png"
+            alt=""
+          />
         </div>
+        <img class="wave" src="images/hero_bg-wave.svg" alt="" />
       </section>
+
       <section class="trio-container">
-        <div class="trio">
-          <div>
-            <img src="images/Trio-2.svg" alt="" />
-            <h3>Get more goodnights</h3>
+        <div class="trio-wrapper">
+          <div class="trio">
+            <div>
+              <img src="images/Trio-2.svg" alt="" />
+              <h3>Get more goodnights</h3>
+            </div>
+            <p>
+              Access our entire library of meditations, sleep sounds, yoga and
+              fitness, and focus music.
+            </p>
           </div>
-          <p>
-            Access our entire library of meditations, sleep sounds, yoga and
-            fitness, and focus music.
-          </p>
-        </div>
-        <div class="trio">
-          <div>
-            <img src="images/Trio-1.svg" alt="" />
-            <h3>Find more joy</h3>
+          <div class="trio">
+            <div>
+              <img src="images/Trio-1.svg" alt="" />
+              <h3>Find more joy</h3>
+            </div>
+            <p>
+              Catch your breath, relax your mind, and feel 14% less stressed in
+              just 10 days.
+            </p>
           </div>
-          <p>
-            Catch your breath, relax your mind, and feel 14% less stressed in
-            just 10 days.
-          </p>
-        </div>
-        <div class="trio">
-          <div>
-            <img src="images/Trio-3.svg" alt="" />
-            <h3>Make every day happier</h3>
+          <div class="trio">
+            <div>
+              <img src="images/Trio-3.svg" alt="" />
+              <h3>Make every day happier</h3>
+            </div>
+            <p>
+              Do it for yourself, and everyone you love. It only takes a few
+              minutes to find some headspace.
+            </p>
           </div>
-          <p>
-            Do it for yourself, and everyone you love. It only takes a few
-            minutes to find some headspace.
-          </p>
         </div>
       </section>
+
       <section class="family-section">
         <div class="family-section-text">
           <h2>Build a happier family with Headspace</h2>
@@ -912,14 +924,16 @@
             <h4 class="small-print">Across all platforms</h4>
           </div>
         </div>
-        <h3>Try Headspace for free</h3>
-        <ul>
-          <li>Stress less with hundreds of meditations</li>
-          <li>Unwind with sleep sounds and music</li>
-          <li>Get in the zone with Focus music</li>
-          <li>Try mood-boosting workouts, yoga, and more</li>
-        </ul>
-        <div class="plan-card-container">
+        <div class="join-promo">
+          <h3>Try Headspace for free</h3>
+          <ul>
+            <li>Stress less with hundreds of meditations</li>
+            <li>Unwind with sleep sounds and music</li>
+            <li>Get in the zone with Focus music</li>
+            <li>Try mood-boosting workouts, yoga, and more</li>
+          </ul>
+        </div>
+        <div class="plan-card-container join-1">
           <p class="top-badge">Best value</p>
           <div class="flex-container">
             <div class="plan-card-text">
@@ -927,23 +941,23 @@
               <h4>14 days free</h4>
               <p>£4.17 GBP/month</p>
             </div>
-            <div>
+            <div class="checkbox-div">
               <input type="checkbox" />
               <span class="checkbox"></span>
             </div>
           </div>
         </div>
 
-        <div class="plan-card-container">
+        <div class="plan-card-container join-2">
           <div class="flex-container">
             <div class="plan-card-text">
               <p>Monthly</p>
               <h4>7 days free</h4>
               <p>£9.99 GBP/month</p>
             </div>
-            <div>
+            <div class="checkbox-div">
               <input type="checkbox" />
-              <span class="checkbox-yellow"></span>
+              <span class="checkbox"></span>
             </div>
           </div>
         </div>
@@ -1062,10 +1076,10 @@
     <div class="footer-bottom">
       <div class="social-icons">
         <a href="#"><img src="images/facebook.svg" alt="facebook" /></a>
-        <a href="#"><img src="images/instagram.svg" alt="facebook" /></a>
-        <a href="#"><img src="images/linkedIn.svg" alt="facebook" /></a>
-        <a href="#"><img src="images/twitter.svg" alt="facebook" /></a>
-        <a href="#"><img src="images/youtube.svg" alt="facebook" /></a>
+        <a href="#"><img src="images/instagram.svg" alt="instagram" /></a>
+        <a href="#"><img src="images/linkedIn.svg" alt="linkedIn" /></a>
+        <a href="#"><img src="images/twitter.svg" alt="twitter" /></a>
+        <a href="#"><img src="images/youtube.svg" alt="youtube" /></a>
       </div>
       <p class="small-print">&copy;2023 Headspace Inc.</p>
     </div>

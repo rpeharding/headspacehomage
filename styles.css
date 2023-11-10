@@ -180,18 +180,23 @@ ul ul li a svg {
   width: 33rem;
   margin: 3rem auto;
 }
+.hero-wrapper .desk-hero-img {
+  display: none;
+}
 
-.hero-img {
-  padding-bottom: 0;
+.wave {
+  fill: #fbf6f3;
+  width: 100%;
+  position: absolute;
 }
 
 .plan-card-container {
-  width: 90vw;
+  width: 90%;
   background-color: #ffffff;
   border-radius: 1.3rem;
   position: relative;
   margin: 1.2rem auto;
-  padding: 2rem 3rem;
+  padding: 2rem 5rem 2rem 3rem;
 }
 .plan-card-container .top-badge {
   position: absolute;
@@ -237,7 +242,6 @@ input[type=checkbox] {
 .checkbox,
 .checkbox-yellow {
   position: absolute;
-  transform: translate(-100%, 0%);
   width: 30px;
   height: 30px;
   border-radius: 6px;
@@ -247,6 +251,29 @@ input[type=checkbox] {
 .checkbox-yellow {
   background-color: white;
   border: none;
+}
+
+.join-section .checkbox-div {
+  display: flex;
+}
+.join-section .plan-card-container.join-1 {
+  background-color: #ff7d1d;
+}
+.join-section .plan-card-container.join-1 .checkbox {
+  background-color: white;
+  border: none;
+  content: url(images/tick.svg);
+}
+.join-section .plan-card-container.join-1 .top-badge {
+  background-color: white;
+  color: #3d3c3c;
+}
+.join-section .plan-card-container.join-2 {
+  background-color: #fbf6f3;
+  color: #3d3c3c;
+}
+.join-section .plan-card-container.join-2 .checkbox {
+  border: 2px solid rgb(211, 211, 211);
 }
 
 .trio-container {
@@ -603,6 +630,7 @@ audio::-webkit-media-controls-play-button {
   color: #ffffff;
   text-align: left;
   padding: 1rem 0rem;
+  display: flex;
 }
 .join-section ul li:before {
   content: url("images/tick.svg");
@@ -619,6 +647,9 @@ audio::-webkit-media-controls-play-button {
   background-color: white;
   color: #3d3c3c;
   padding: 1.8rem 6rem;
+}
+.join-section .join-promo {
+  margin: 2rem 0rem;
 }
 
 .join-contents-wrapper {
@@ -735,6 +766,9 @@ footer .language-selector-wrapper {
 }
 
 @media screen and (min-width: 770px) {
+  h2 {
+    font-size: 5.2rem;
+  }
   .desktop-nav-links {
     display: flex;
     align-items: center;
@@ -742,6 +776,34 @@ footer .language-selector-wrapper {
   }
   .burger-menu-wrapper {
     padding: 2rem 3.2rem;
+  }
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1 1 0;
+    justify-content: space-around;
+  }
+  .hero-wrapper h2 {
+    font-size: 5.2rem;
+  }
+  .hero-wrapper .desk-hero-img {
+    display: initial;
+    height: 100vh;
+  }
+  .hero-wrapper .mob-hero-img {
+    display: none;
+  }
+  .hero-wrapper .hero-content {
+    min-width: 400px;
+  }
+  .hero-wrapper .hero-content button {
+    width: 16rem;
+  }
+  .trio-container {
+    display: flex;
+  }
+  .trio > div {
+    display: flex;
   }
   .stories-wrapper {
     display: flex;

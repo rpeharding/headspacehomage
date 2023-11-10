@@ -221,20 +221,26 @@ ul ul li a {
     width: 33rem;
     margin: 3rem auto;
   }
+  & .desk-hero-img {
+    display: none;
+  }
 }
 
-.hero-img {
-  padding-bottom: 0;
+.wave {
+  fill: $backgroundLight;
+  width: 100%;
+  position: absolute;
+  // filter: invert(100%);
 }
 
 //card
 .plan-card-container {
-  width: 90vw;
+  width: 90%;
   background-color: #ffffff;
   border-radius: 1.3rem;
   position: relative;
   margin: 1.2rem auto;
-  padding: 2rem 3rem;
+  padding: 2rem 5rem 2rem 3rem;
 
   & .top-badge {
     position: absolute;
@@ -274,7 +280,6 @@ input[type="checkbox"] {
 .checkbox,
 .checkbox-yellow {
   position: absolute;
-  transform: translate(-100%, 0%);
   width: 30px;
   height: 30px;
   border-radius: 6px;
@@ -284,6 +289,32 @@ input[type="checkbox"] {
   background-color: white;
   border: none;
 }
+
+.join-section {
+  & .checkbox-div {
+    display: flex;
+  }
+  & .plan-card-container.join-1 {
+    background-color: $primaryBrand;
+    & .checkbox {
+      background-color: white;
+      border: none;
+      content: url(images/tick.svg);
+    }
+    & .top-badge {
+      background-color: white;
+      color: $fontColourDark;
+    }
+  }
+  & .plan-card-container.join-2 {
+    background-color: $backgroundLight;
+    color: $fontColourDark;
+    & .checkbox {
+      border: 2px solid rgb(211, 211, 211);
+    }
+  }
+}
+
 // TRIO SECTION
 .trio-container {
   padding: 4rem 2rem;
@@ -642,7 +673,9 @@ audio::-webkit-media-controls-play-button {
     color: $fontColourLight;
     text-align: left;
     padding: 1rem 0rem;
+    display: flex;
   }
+
   & ul li:before {
     content: url("images/tick.svg");
     padding: 0rem 1rem;
@@ -659,6 +692,9 @@ audio::-webkit-media-controls-play-button {
     background-color: white;
     color: $fontColourDark;
     padding: 1.8rem 6rem;
+  }
+  & .join-promo {
+    margin: 2rem 0rem;
   }
 }
 
@@ -785,6 +821,9 @@ footer {
 // MEDIA QUERIES
 
 @media screen and (min-width: 770px) {
+  h2 {
+    font-size: 5.2rem;
+  }
   .desktop-nav-links {
     display: flex;
     align-items: center;
@@ -792,6 +831,40 @@ footer {
   }
   .burger-menu-wrapper {
     padding: 2rem 3.2rem;
+  }
+
+  // hero
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1 1 0;
+    h2 {
+      font-size: 5.2rem;
+    }
+    justify-content: space-around;
+
+    & .desk-hero-img {
+      display: initial;
+      height: 100vh;
+    }
+    & .mob-hero-img {
+      display: none;
+    }
+    & .hero-content {
+      min-width: 400px;
+      & button {
+        width: 16rem;
+      }
+    }
+  }
+
+  //trio
+  .trio-container {
+    display: flex;
+  }
+
+  .trio > div {
+    display: flex;
   }
 
   .stories-wrapper {
