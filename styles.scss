@@ -166,9 +166,61 @@ ul ul li a {
   z-index: 9999;
 }
 
-.burger-menu-contents {
-  display: none;
+.burger {
+  position: relative;
+  height: 28px;
+  padding-right: 10px;
 }
+
+.cross {
+  display: none;
+  position: relative;
+  height: 28px;
+  padding-right: 10px;
+}
+
+.burger-wrapper {
+  input {
+    display: none;
+  }
+
+  .burger-menu-contents {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 63px;
+    overflow-y: scroll;
+    background-color: white;
+    width: 100%;
+    padding: 2rem;
+    border-top: 1px solid #d6d6d6;
+    & h2::after {
+      content: url(images/right-arrow.svg);
+    }
+    & svg {
+      width: 19px;
+    }
+    & p {
+      font-size: 1.6rem;
+      padding: 1.6rem 0rem;
+    }
+    & h2 {
+      line-height: 5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  input:checked ~ .burger-menu-contents {
+    display: block;
+  }
+  input:checked ~ label > .burger {
+    display: none;
+  }
+  input:checked ~ label > .cross {
+    display: block;
+  }
+}
+
 .nav-logo {
   width: 12.5rem;
 }
@@ -302,6 +354,9 @@ input[type="checkbox"] {
   }
   & .plan-card-container.join-1 {
     background-color: $primaryBrand;
+    & p {
+      color: white;
+    }
     & .checkbox {
       background-color: white;
       border: none;
@@ -319,6 +374,10 @@ input[type="checkbox"] {
       border: 2px solid rgb(211, 211, 211);
     }
   }
+}
+
+.small-print-highlight {
+  color: red;
 }
 
 // TRIO SECTION
@@ -510,6 +569,7 @@ audio::-webkit-media-controls-play-button {
 .large-articles-container,
 .small-articles-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 0.2rem;
   margin: 6rem 0rem;
@@ -524,6 +584,7 @@ audio::-webkit-media-controls-play-button {
     height: 40rem;
     position: absolute;
     display: flex;
+    text-align: left;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
@@ -543,7 +604,7 @@ audio::-webkit-media-controls-play-button {
       @include bodyText(1.2rem);
     }
     & .article-card-bottom-content {
-      background-color: white;
+      background-color: $backgroundLight;
       padding: 2rem;
       width: 100%;
       border-radius: 1.2rem;
@@ -639,9 +700,7 @@ audio::-webkit-media-controls-play-button {
 }
 
 .list-img {
-  border-radius: 1.3rem;
   display: none;
-  width: 50%;
 }
 
 .img-divider-container {
@@ -660,7 +719,6 @@ audio::-webkit-media-controls-play-button {
   color: $fontColourLight;
   text-align: center;
   @include spacing(0rem, 0rem, 4rem, 2rem);
-  padding-bottom: 18rem;
 
   & h2 {
     line-height: 4.2rem;
@@ -703,9 +761,10 @@ audio::-webkit-media-controls-play-button {
   }
 }
 
-.join-contents-wrapper {
+.join-cards-flex {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+
   & .join-card {
     display: flex;
     min-height: 27rem;
@@ -726,6 +785,14 @@ audio::-webkit-media-controls-play-button {
       letter-spacing: normal;
     }
   }
+}
+
+.curved {
+  background: $backgroundDark;
+  height: 100px;
+  margin-top: -50px;
+  border-bottom-left-radius: 50% 25%;
+  border-bottom-right-radius: 50% 25%;
 }
 
 footer {
@@ -846,6 +913,7 @@ footer {
   }
   h2 {
     font-size: 5.2rem;
+    line-height: 6rem;
   }
   .desktop-nav-links {
     display: flex;
@@ -855,6 +923,23 @@ footer {
   }
   .burger-menu-wrapper {
     padding: 0.6rem 3.2rem;
+    .burger-menu-contents {
+      top: 82px;
+      padding: 10rem 10rem;
+      & .burger-menu-desktop {
+        width: 760px;
+        margin: 0 auto;
+      }
+      & svg {
+        width: 52px;
+      }
+      h2 {
+        line-height: 7rem;
+      }
+      ul:nth-child(2) {
+        padding-top: 30px;
+      }
+    }
   }
 
   // hero
@@ -997,4 +1082,142 @@ footer {
   }
 
   // articles
+  .articles-section {
+    width: 770px;
+    margin: 0 auto;
+    .small-articles-container {
+      margin: 0 auto;
+      width: 512px;
+      text-align: left;
+      margin-bottom: 8rem;
+    }
+    .article-card-content {
+      height: 318px;
+      .article-card-bottom-content {
+        width: 80%;
+        padding: 1rem;
+        & h3 {
+          line-height: 2.8rem;
+        }
+      }
+    }
+    & .article-card {
+      min-width: 382px;
+      object-fit: cover;
+      min-height: 30rem;
+
+      & img {
+        height: 318px;
+      }
+      & .article-card-bottom-content {
+        & svg {
+          width: 25px;
+          display: initial;
+          color: white;
+          background-color: $primaryBrand;
+          padding: 5px;
+          margin-top: 2px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .large-articles-container {
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+
+  //animation
+  .animation-arc {
+    padding: 4rem 0rem;
+    display: flex;
+    align-items: center;
+  }
+  //list section
+
+  .list-section {
+    max-width: 800px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    h3 {
+      font-size: 3.2rem;
+    }
+    li {
+      color: $fontColourDark;
+    }
+  }
+
+  .list-section-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .list {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .list-section h2 {
+    line-height: 6rem;
+  }
+  .list-img {
+    display: initial;
+    border-radius: 1.3rem;
+    width: 352px;
+  }
+  .img-divider-container {
+    min-width: 100%;
+    margin-top: -20rem;
+  }
+
+  //join section
+
+  .join-section {
+    padding-bottom: 0px;
+    h2 {
+      display: flex;
+      line-height: 6rem;
+    }
+  }
+  .join-contents-outer {
+    max-width: 770px;
+    margin: 0 auto;
+    .btn {
+      padding: 2rem 4rem;
+    }
+  }
+
+  .join-promo {
+    h3 {
+      font-size: 3.2rem;
+      text-align: left;
+      margin-left: 10rem;
+    }
+    & ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .plan-card-flex-join {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .join-cards-flex {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 14rem;
+  }
+  .join-card {
+    min-width: 220px;
+    max-width: 250px;
+  }
+
+  //footer
+  .footer-mobile {
+    display: none;
+  }
 }
