@@ -513,6 +513,12 @@ audio::-webkit-media-controls-play-button {
 .articles-section h2 {
   text-align: right;
 }
+.articles-section .btn {
+  margin: 50px auto;
+  text-align: center;
+  width: 200px;
+}
+
 .large-articles-container,
 .small-articles-container {
   display: flex;
@@ -803,7 +809,30 @@ footer .get-app .get-app-imgs img {
 }
 footer .language-selector-wrapper {
   display: flex;
+  align-items: center;
+  padding-bottom: 3rem;
+  display: flex;
   justify-content: space-between;
+}
+footer .language-selector-wrapper .language-selector {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  font-weight: bold;
+  border: 2px solid #3d3c3c;
+  border-radius: 40px;
+  padding: 0.6rem 4rem;
+  width: 196px;
+}
+footer .language-selector-wrapper .language-selector::before {
+  content: url(images/web.svg);
+  padding-top: 4px;
+}
+footer .language-selector-wrapper .language-selector::after {
+  content: url(images/up-arrow.svg);
+  transform: rotate(180deg);
+  margin-bottom: 3px;
 }
 
 .footer-bottom {
@@ -817,6 +846,7 @@ footer .language-selector-wrapper {
   justify-content: center;
   gap: 1.2rem;
   padding: 1rem;
+  color: #444240;
 }
 .footer-bottom .social-icons img {
   background-color: white;
@@ -825,6 +855,14 @@ footer .language-selector-wrapper {
 }
 .footer-bottom .small-print {
   color: #b2b2b2;
+}
+
+.back-to-top > img {
+  width: 32px;
+}
+
+.footer-desktop {
+  display: none;
 }
 
 @media screen and (min-width: 500px) {
@@ -1117,5 +1155,116 @@ footer .language-selector-wrapper {
   }
   .footer-mobile {
     display: none;
+  }
+  .footer-desktop {
+    display: initial;
+  }
+  .footer-desktop h3,
+  .footer-desktop h4 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    vertical-align: end;
+    height: 8rem;
+  }
+  .footer-desktop li {
+    font-size: 1.2rem;
+    color: #848484;
+    line-height: 2.2rem;
+  }
+  .footer-desktop .footer-top {
+    width: 760px;
+    margin: auto;
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-desktop .footer-top .get-app {
+    margin-top: 0;
+  }
+  .footer-desktop .footer-top .get-app-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 120px;
+    padding-top: 0;
+  }
+  .footer-desktop .footer-top .footer-top-left {
+    display: flex;
+    gap: 2rem;
+    flex-basis: 400px;
+  }
+  .footer-desktop .footer-top .footer-top-left div {
+    width: 33%;
+  }
+  .footer-desktop .footer-top .footer-top-right {
+    display: flex;
+    width: 40%;
+    gap: 2rem;
+  }
+  .footer-desktop .footer-top .footer-top-right .login-cta {
+    padding-top: 0;
+    gap: 0;
+  }
+  .footer-desktop .footer-top .footer-top-right .login-cta a.btn {
+    padding: 1.3rem 6rem;
+  }
+  .footer-desktop .footer-bottom {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-desktop .footer-bottom .language-selector-wrapper {
+    position: relative;
+  }
+  .footer-desktop .footer-bottom .back-to-top {
+    position: absolute;
+    transform: translateY(-100px) translateX(150px);
+  }
+  .footer-desktop .footer-bottom .back-to-top img {
+    width: 32px;
+  }
+  .footer-desktop .footer-bottom .footer-bottom-right {
+    display: flex;
+    gap: 6rem;
+  }
+  .footer-desktop .footer-bottom .footer-bottom-right .language-selector-wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-desktop .footer-bottom .footer-bottom-right .language-selector-wrapper .language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    color: white;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    padding: 0.6rem 4rem;
+    width: 196px;
+  }
+  .footer-desktop .footer-bottom .footer-bottom-right .language-selector-wrapper .language-selector::before {
+    content: url(images/web.svg);
+    padding-top: 4px;
+    color: white;
+  }
+  .footer-desktop .footer-bottom .footer-bottom-right .language-selector-wrapper .language-selector::after {
+    content: url(images/up-arrow.svg);
+    transform: rotate(180deg);
+    margin-bottom: 3px;
+    color: white;
+  }
+  .footer-desktop .footer-bottom ul {
+    width: 350px;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .footer-desktop .footer-bottom ul li {
+    line-height: 0rem;
+    color: rgb(199, 199, 199);
   }
 }/*# sourceMappingURL=styles.css.map */
